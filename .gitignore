@@ -1,0 +1,6 @@
+builds/
+obj/
+logs/
+Makefile
+
+*.make
