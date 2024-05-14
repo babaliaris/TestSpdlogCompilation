@@ -2,7 +2,7 @@ workspace "TestSPDlog"
     configurations {"debug", "dist", "release"}
     platforms "x64"
 
-    include "../spdlog"
+    include "external/spdlog"
 
     project "TestSPDLOG"
         pchheader "pch.h"
@@ -15,15 +15,15 @@ workspace "TestSPDlog"
         objdir "%{_WORKING_DIR}/obj/%{prj.name}_%{cfg.shortname}/"
 
         files {
-            "./**.h",
-            "./**.hpp",
-            "./**.cpp",
-            "./**.c"
+            "src/**.h",
+            "src/**.hpp",
+            "src/**.cpp",
+            "src/**.c"
         }
 
         includedirs {
-            ".",
-            "../spdlog/include"
+            "src/",
+            "external/spdlog/include"
 
         }
 
